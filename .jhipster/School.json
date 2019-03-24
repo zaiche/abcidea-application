@@ -1,0 +1,39 @@
+{
+    "name": "School",
+    "fields": [
+        {
+            "fieldName": "schoolName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "school",
+            "relationshipName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "school",
+            "javadoc": "A relationship",
+            "relationshipName": "student"
+        }
+    ],
+    "changelogDate": "20190324184044",
+    "entityTableName": "school",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "AbcideaApp",
+    "applications": "*",
+    "microserviceName": "AbcideaApp"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Region",
+    "fields": [
+        {
+            "fieldName": "regionName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190324184041",
+    "entityTableName": "region",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "AbcideaApp",
+    "applications": "*",
+    "microserviceName": "AbcideaApp"
+}
