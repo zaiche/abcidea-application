@@ -1,0 +1,110 @@
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity School {
+	schoolName String required
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Task {
+	title String,
+	description String
+}
+
+/**
+ * The Employee entity.
+ */
+entity Student {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	startDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+entity Course {
+	courseTitle String,
+	minSalary Long,
+	maxSalary Long
+}
+
+entity CourseHistory {
+	startDate Instant,
+	endDate Instant,
+	language Language
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToOne {
+	Country{region} to Region
+}
+
+relationship OneToOne {
+	Location{country} to Country
+}
+
+relationship OneToOne {
+	School{location} to Location
+}
+
+relationship ManyToMany {
+	Course{task(title)} to Task{course}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Student{course} to Course,
+	/**
+	* A relationship
+	*/
+	School{student} to
+	/**
+	* Another side of the same relationship
+	*/
+	Student
+}
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	CourseHistory{course} to Course,
+	CourseHistory{school} to School,
+	CourseHistory{student} to Student
+}
+
+// Set pagination options
+paginate CourseHistory, Student with infinite-scroll
+paginate Course with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Student, Course
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
