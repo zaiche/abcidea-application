@@ -1,0 +1,48 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "AbcideaApp",
+    "packageName": "ma.lucidea.abcidea",
+    "packageFolder": "ma/lucidea/abcidea",
+    "serverPort": 9999,
+    "serviceDiscoveryType": "consul",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "ar-ly",
+      "fr",
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.2",
+    "jwtSecretKey": "ZDE0MDBjYmQ2YTE1ODFhMDI5YmUwMGQ3ZGY1ODczMzA2N2JkMDVkNzYwYTg5MDFjMGI5ZmZiMmUxNGNkYzdlNjUxMjhjMWM4MDUzZmViZGNlMzEwOGVkZDUzZTczNGI1OTgzYzU0YjBiN2JiNDZmNzA2ZDMwNTdhZWNkZTQ1MzE=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "zaiche",
+  "repository-name": "abcidea-application"
+}
